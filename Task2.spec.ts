@@ -100,9 +100,6 @@ if (verifyResponse.status() === 200) {
     // ======================
     const deletedGetResponse = await apiContext.get(`/posts/${postId}`);
 
-    // ⚠️ NOTE:
-    // JSONPlaceholder is FAKE API → deletion not persisted
-    // So we validate behavior instead of real deletion
 
     expect([200, 404]).toContain(deletedGetResponse.status());
 
